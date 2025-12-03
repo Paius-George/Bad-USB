@@ -16,6 +16,13 @@ Bad USB-urile sunt programate sa execute atacuri de tip keystroke injection prin
 
 Depinzand de keystroke-urile trimise, un Bad USB poate sa instaleze pe un computer malware sau sa extraga date private. Poate sa faca aproape tot ce poti face si tu cu computerul tau chiar acum.
 
+## Cum putem preveni un astfel de atac?
+
+Atac-ul unui Bad USB cum am precizat mai sus, functioneaza doar cand un astfel de device este introdus in computer-ul nostru. Prin urmare ca reguli de precautie ar trebui:
+
+- Niciodata sa nu conectam un dispozitiv USB: stick, cablu (pentru ca exista spre exemplu [O.MG Cable](https://shop.hak5.org/products/omg-cable?srsltid=AfmBOopnsigoQO3fz623PuO05h8JmmDPtADbqIenAGjWnPTwGRKfzp-X) care arata exact ca orice cablu de incarcare uzual) necunoscut.
+- Ar trebui ca niciodata sa ne lasam computer-ul nesupravegheat cand este deblocat.
+
 # Exemplu de Bad USB
 <img width="1260" height="705" alt="image" src="https://github.com/user-attachments/assets/35480388-e273-4abb-8e62-7759a7ade881" />
 
@@ -83,3 +90,6 @@ Am scris un cod care deschide in browser-ul computer-ului implicit pagina mea de
 
 ![Image](https://github.com/user-attachments/assets/6aface64-925a-4319-a62b-428f554b8128)
 
+----
+
+###### *Va multumesc pentru parcurgerea documentatiei mele!*
