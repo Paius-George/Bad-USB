@@ -83,12 +83,11 @@ Am scris un cod care deschide in browser-ul computer-ului implicit pagina mea de
 
 
 6. Putem observa acum ca totul este in regula si ATtiny-ul este pregatit sa execute codul caruia i-am dat la pasul 3 upload.
-
+   
+<img width="426" height="407" alt="image" src="https://github.com/user-attachments/assets/30ad645d-acc6-4da9-b436-ef6b4b6b2a01" />
 
 
 7. Dupa ce am dat upload, putem scoate ATtiny-ul din computer si la reintroduce va executa codul.
-
-<img width="426" height="407" alt="image" src="https://github.com/user-attachments/assets/40666331-ceae-4fdc-8df9-e5c4a1cfdf92" />
 
 
 ![Image](https://github.com/user-attachments/assets/6aface64-925a-4319-a62b-428f554b8128)
@@ -96,4 +95,5 @@ Am scris un cod care deschide in browser-ul computer-ului implicit pagina mea de
 ----
 
 ###### *Va multumesc pentru parcurgerea documentatiei mele!*
+
 
