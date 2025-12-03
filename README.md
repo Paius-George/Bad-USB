@@ -81,4 +81,5 @@ Am scris un cod care deschide in browser-ul computer-ului implicit pagina mea de
 
 7. Dupa ce am dat upload, putem scoate ATtiny-ul din computer si la reintroduce va executa codul.
 
+![Image](https://github.com/user-attachments/assets/6aface64-925a-4319-a62b-428f554b8128)
 
