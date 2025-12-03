@@ -24,18 +24,19 @@ Atac-ul unui Bad USB cum am precizat mai sus, functioneaza doar cand un astfel d
 - Ar trebui ca niciodata sa ne lasam computer-ul nesupravegheat cand este deblocat.
 
 # Exemplu de Bad USB
-<img width="1260" height="705" alt="image" src="https://github.com/user-attachments/assets/35480388-e273-4abb-8e62-7759a7ade881" />
+
+<img width="1497" height="1600" alt="image" src="https://github.com/user-attachments/assets/6b9ad99d-6b89-4aa1-ad80-ddd5007d6549" />
 
 In aceasta documentatie am ales sa folosesc un ATtiny85, pentru ca este un exemplu foarte bun si de altfel potrivit pentru toate bugetele.
 
 1. Deschidem Arduino IDE, apasam pe butonul File > Preferences si introducem acest [URL](https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json) in sectiunea de "Additional boards manager URLs"
 
-<img width="1255" height="706" alt="image" src="https://github.com/user-attachments/assets/5b90ebe4-c8bb-46dc-bf30-1c1b2cba5f2c" />
+<img width="1260" height="705" alt="image" src="https://github.com/user-attachments/assets/1c8f2964-f0cf-4c30-8c62-e3db5a44c710" />
 
 
 2. Setam board-ul prin a apasa butonul Tools > Board > Digistump AVR Boards unde selectam Digispark (Default - 16.5mhz)
 
-<img width="1264" height="707" alt="image" src="https://github.com/user-attachments/assets/408dc39f-e1ec-46ed-b02d-85cea977850f" />
+<img width="1255" height="706" alt="image" src="https://github.com/user-attachments/assets/e673f8a7-7b48-4056-a2c7-70987d1e9e1b" />
 
 
 3. Acum trebuie sa introducem un cod pe care ATtiny85-ul nostru sa il execute la introducerea intr-un computer.
@@ -75,21 +76,24 @@ Am scris un cod care deschide in browser-ul computer-ului implicit pagina mea de
 
 4. Apasam pe buton-ul de upload si punem codul pe device-ul conectat (in cazul meu ATtiny85). 
 
-<img width="426" height="407" alt="image" src="https://github.com/user-attachments/assets/2724a315-155f-42e8-bd37-78c7ef2277ee" />
-
 
 5. Observam ca in terminal ni se spune sa introducem ATtiny-ul, asadar il introducem.
+
+<img width="1264" height="707" alt="image" src="https://github.com/user-attachments/assets/10c7aac5-6503-4c63-9436-9dbe5482dcf9" />
 
 
 6. Putem observa acum ca totul este in regula si ATtiny-ul este pregatit sa execute codul caruia i-am dat la pasul 3 upload.
 
-<img width="426" height="407" alt="image" src="https://github.com/user-attachments/assets/1f8b9969-a1bc-4b22-8f71-66d1567f4cb8" />
 
 
 7. Dupa ce am dat upload, putem scoate ATtiny-ul din computer si la reintroduce va executa codul.
+
+<img width="426" height="407" alt="image" src="https://github.com/user-attachments/assets/40666331-ceae-4fdc-8df9-e5c4a1cfdf92" />
+
 
 ![Image](https://github.com/user-attachments/assets/6aface64-925a-4319-a62b-428f554b8128)
 
 ----
 
 ###### *Va multumesc pentru parcurgerea documentatiei mele!*
+
