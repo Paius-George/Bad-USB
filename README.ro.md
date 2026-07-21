@@ -1,0 +1,102 @@
+# Bad USB
+
+*[English version →](README.md)*
+
+<img alt="image" src="https://github.com/user-attachments/assets/9d181f49-eeff-4c67-9be1-8f7fbe8d94f4" />
+
+## Ce este?
+Un Bad USB este un device ce se comporta ca o tastatura pentru a realiza un keystroke injection attack, care poate fi folosit pentru a deschide un terminal, iar apoi sa ruleze comenzi pe un computer tinta.
+
+Pe exterior, un Bad USB de obicei este foarte asemanator cu un USB normal. Insa, pe interior, are un chip programat sa se comporte precum o tastatura USB, pentru a deschide un terminal si a rula comenzi in cateva secunde.
+
+## De ce functioneaza?
+Functioneaza pentru ca abuzeaza de exceptiile noastre si increderea fata de cabluri USB si Flash Drive-uri. De altfel, se folosesc si de increderea computerului tinta in tastaturile USB.
+
+Input-ul de tastatura este crezut fara dubii de computer, pentru ca acesta vine direct de la un om, om care are acces total asupra acestuia. Problema intervine cand keystroke-urile sunt introduse, pentru ca acesta nu stie daca vin chiar de la un om sau prin alta metoda.
+
+## Keystroke Injection Attack
+Bad USB-urile sunt programate sa execute atacuri de tip keystroke injection prin trimiterea unei secvente predefinite de taste catre computer. Sistemul de operare interpreteaza aceste semnale ca venind de la un utilizator uman si le proceseaza ca atare, desi ele sunt injectate cu viteze supraomenesti (peste 9000 de caractere pe secunda).
+
+Depinzand de keystroke-urile trimise, un Bad USB poate sa instaleze pe un computer malware sau sa extraga date private. Poate sa faca aproape tot ce poti face si tu cu computerul tau chiar acum.
+
+## Cum putem preveni un astfel de atac?
+
+Atac-ul unui Bad USB cum am precizat mai sus, functioneaza doar cand un astfel de device este introdus in computer-ul nostru. Prin urmare ca reguli de precautie ar trebui:
+
+- Niciodata sa nu conectam un dispozitiv USB: stick, cablu (pentru ca exista spre exemplu [O.MG Cable](https://shop.hak5.org/products/omg-cable?srsltid=AfmBOopnsigoQO3fz623PuO05h8JmmDPtADbqIenAGjWnPTwGRKfzp-X) care arata exact ca orice cablu de incarcare uzual) necunoscut.
+- Ar trebui ca niciodata sa ne lasam computer-ul nesupravegheat cand este deblocat.
+
+# Exemplu de Bad USB
+
+<img alt="image" src="https://github.com/user-attachments/assets/6b9ad99d-6b89-4aa1-ad80-ddd5007d6549" />
+
+In aceasta documentatie am ales sa folosesc un ATtiny85, pentru ca este un exemplu foarte bun si de altfel potrivit pentru toate bugetele.
+
+1. Deschidem Arduino IDE, apasam pe butonul File > Preferences si introducem acest [URL](https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json) in sectiunea de "Additional boards manager URLs"
+
+<img alt="image" src="https://github.com/user-attachments/assets/1c8f2964-f0cf-4c30-8c62-e3db5a44c710" />
+
+
+2. Setam board-ul prin a apasa butonul Tools > Board > Digistump AVR Boards unde selectam Digispark (Default - 16.5mhz)
+
+<img alt="image" src="https://github.com/user-attachments/assets/e673f8a7-7b48-4056-a2c7-70987d1e9e1b" />
+
+
+3. Acum trebuie sa introducem un cod pe care ATtiny85-ul nostru sa il execute la introducerea intr-un computer.
+
+```
+// Includem biblioteca necesara pentru simularea tastaturii USB
+#include "DigiKeyboard.h"
+
+// URL-ul pe care vrei sa-l deschizi
+const char* targetUrl = "https://github.com/Paius-George";
+
+void setup() {
+
+  DigiKeyboard.delay(5000); // Asteapta 5 secunde
+
+  // 1. Apasa tasta Windows (GUI) + R pentru a deschide fereastra "Run" (Executare)
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500); 
+
+  // 2. Tasteaza URL-ul dorit
+  DigiKeyboard.print(targetUrl); 
+  DigiKeyboard.delay(500);
+
+  // 3. Apasa ENTER pentru a executa comanda (deschide link-ul in browserul implicit)
+  DigiKeyboard.sendKeyStroke(KEY_ENTER); 
+  DigiKeyboard.delay(500);
+
+  // sau sa intre într-o bucla care nu face nimic.
+}
+
+void loop() {
+  // Loop-ul este lasat gol, deoarece actiunea dorita se executa doar o singura data(in setup)
+}
+```
+
+Am scris un cod care deschide in browser-ul computer-ului implicit pagina mea de Github. Am adaugat si comentarii pentru a intelege fiecare linie de cod si ce rol are.
+
+4. Apasam pe buton-ul de upload si punem codul pe device-ul conectat (in cazul meu ATtiny85). 
+
+
+5. Observam ca in terminal ni se spune sa introducem ATtiny-ul, asadar il introducem.
+
+<img alt="image" src="https://github.com/user-attachments/assets/10c7aac5-6503-4c63-9436-9dbe5482dcf9" />
+
+
+6. Putem observa acum ca totul este in regula si ATtiny-ul este pregatit sa execute codul caruia i-am dat la pasul 3 upload.
+   
+<img alt="image" src="https://github.com/user-attachments/assets/30ad645d-acc6-4da9-b436-ef6b4b6b2a01" />
+
+
+7. Dupa ce am dat upload, putem scoate ATtiny-ul din computer si la reintroduce va executa codul.
+
+
+![Image](https://github.com/user-attachments/assets/6aface64-925a-4319-a62b-428f554b8128)
+
+----
+
+###### *Va multumesc pentru parcurgerea documentatiei mele!*
+
+
